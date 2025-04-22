@@ -1,6 +1,6 @@
 # Big Data Analytics - Assignment 2 (160122771047)
 
-## 🔧 Environment
+## Environment
 - **Platform:** Google Colab
 - **Language:** Python 3
 - **Framework:** Apache Spark (via PySpark)
@@ -11,74 +11,74 @@
 
 ---
 
-## 📁 Project Structure
+## Project Structure
 ```
 assignment/
 │
-├── classification_model.ipynb      # Spark-based classification model
-├── clustering_model.ipynb          # Spark-based clustering model
-└── recommendation_engine.ipynb     # Spark-based movie recommendation system
+├── 1_classifier_with_spark.ipynb          # Spark-based classification model
+├── 2_clustering_with_spark.ipynb.         # Spark-based clustering model
+└── 3_recommender_sys_with_spark.ipynb     # Spark-based movie recommendation system
 ```
 
 ---
 
 ## 1⃣ Classification Model
 
-### ✔ Objective:
+### Objective:
 Build a classification model using Apache Spark to predict a target class based on input features.
 
-### 📊 Dataset:
+### Dataset:
 Used the **Iris dataset**, a classic multiclass classification problem with features like petal/sepal length & width.
 
-### 📈 Model:
+### Model:
 - **Algorithm:** Logistic Regression
 - **Pipeline:** StringIndexer → VectorAssembler → LogisticRegression
 - **Evaluation:** Accuracy, Confusion Matrix
 
-### 🔍 Result:
+### Result:
 Achieved high accuracy (~95%+) on test data.
 
 ---
 
 ## 2⃣ Clustering Model
 
-### ✔ Objective:
+### Objective:
 Perform unsupervised clustering on a dataset using Spark’s MLlib.
 
-### 📊 Dataset:
+### Dataset:
 Used the **Iris dataset** again, but this time without labels.
 
-### 📈 Model:
+### Model:
 - **Algorithm:** KMeans Clustering
 - **Pipeline:** VectorAssembler → KMeans
 - **Evaluation:** Silhouette Score
 
-### 🔍 Result:
+### Result:
 The clustering grouped the dataset into 3 distinct clusters (aligned well with actual classes).
 
 ---
 
 ## 3⃣ Recommendation Engine
 
-### ✔ Objective:
+### Objective:
 Create a collaborative filtering recommendation system to suggest movies to users.
 
-### 📊 Dataset:
+### Dataset:
 **MovieLens 100k** dataset (user ratings for movies)
 
-### 📈 Model:
+### Model:
 - **Algorithm:** Alternating Least Squares (ALS)
 - **Process:**
   - Data cleaning and transformation
   - Training ALS model
   - Generating recommendations for users
 
-### 🔍 Result:
+### Result:
 Successfully generated top-N movie recommendations for individual users.
 
 ---
 
-## ⚙️ Setup Instructions (for all notebooks)
+## Setup Instructions (for all notebooks)
 Paste and run the following in a Colab cell to install Spark:
 ```python
 !apt-get install openjdk-11-jdk -y
@@ -101,7 +101,7 @@ spark = SparkSession.builder.appName("MySparkApp").getOrCreate()
 
 ---
 
-## ✅ Summary
+## Summary
 
 | Task              | Algorithm Used         | Dataset       | Spark Component | Result          |
 |-------------------|------------------------|----------------|------------------|------------------|
